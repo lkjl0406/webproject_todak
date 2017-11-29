@@ -55,7 +55,7 @@ a{
   border-color: #d6f0cc;
   border-width: 2px;
   height: auto;
-  min-height: 370px;
+  min-height: 450px;
   background-image: url('../img/logo.png');
   background-size: 100px;
   background-repeat: no-repeat;
@@ -106,4 +106,9 @@ a{
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
+}
+.DetailSideContent {
+    font-size: 12px;
+    padding-top: 15px;
+    text-align: center;
 }

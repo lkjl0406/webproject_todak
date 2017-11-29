@@ -9,19 +9,19 @@
 <body>
   <header>
     <div class="headerBox">
-      <img src="img/logo.png" alt="logo" class="logo">
+      <a href="main.html"><img src="img/logo.png" alt="logo" class="logo"></a>
       <div class="authBox">
         <a href="login.html" class="login" style="border-color: #d6f0cc">로그인</a>
         <a href="#" class="register" style="border-color: #fce69f">회원가입</a>
       </div>
     </div>
   </header>
-  <nav class="navMenuBox">x
-    <a href="#"class="navMenu1" style="border-color: #d6f0cc">토닥토닥?</a>
-    <a href="#"class="navMenu2" style="border-color: #fce69f">자신의 스트레스는 몇 점?</a>
-    <a href="#"class="navMenu3" style="border-color: #d6f0cc">self 토닥토닥</a>
+  <nav class="navMenuBox">
+    <a href="what_is_todak.html"class="navMenu1" style="border-color: #d6f0cc">토닥토닥?</a>
+    <a href="self_stress_check.html"class="navMenu2" style="border-color: #fce69f">자신의 스트레스는 몇 점?</a>
+    <a href="self_todak.html"class="navMenu3" style="border-color: #d6f0cc">self 토닥토닥</a>
     <a href="#"class="navMenu4" style="border-color: #fce69f">오늘, 자신의 행복지수는?</a>
-    <a href="#"class="navMenu5" style="border-color: #d6f0cc">서로 위로해요</a>
+    <a href="comfort_each_other.html"class="navMenu5" style="border-color: #d6f0cc">서로 위로해요</a>
   </nav>
   <article class="sideContentBox">
     <div class="sideTitle"><span style="color:gray; font-size:14px;">&nbsp;자신의 스트레스는 몇 점?</span>
@@ -56,7 +56,7 @@
                 <th class="th-num">1</th>
                 <th class="th-que">머리가 개운하지 않다</th>
                 <th>
-                    <input type=radio name="chk_info1" class="th-yes" checked>
+                    <input type=radio name="chk_info1" class="th-yes">
                 </th>
                 <th>
                     <input type=radio name="chk_info1" class="th-no">
@@ -371,19 +371,99 @@
                 </th>
             </tr>
         </table>
-        <button onclick="radiocount()">버튼</button>
+        <button onclick="radiocount(),scoreprint()" class="buttonSubmit">제출</button>
     </article>
   </section>
     <script>
+        var cnt = 0;
+        var result;
         function radiocount() {
+            var radios = document.getElementsByClassName('th-yes');
             var i;
-            var cnt = 0;
-            for(i=0; i<30; i++){
-                if(document.getElementsByClassName('th-yes')[i].checked==true){
-                    cnt++;
-                }
+            for(i=0; i < radios.length; i++){
+              if(radios[i].checked)
+                cnt++;
             }
-            console.log(cnt);
+        }
+        
+        if(cnt<=5)
+            result = "정상";
+        else if((cnt>5)&&(cnt<=10))
+            result = "가벼운 스트레스 상태";
+        else
+            result = "중증 스트레스 상태로 몸과 마음에 대한 종합검진을 받을 필요가 있다.";
+        
+        function scoreprint(){
+            var input = document.getElementsByClassName("mainArticle");
+            var string = "<div class='mainArticleTitle'>";
+            string += "<span style='color:#FA5858; font-size:25px !important;'>";
+            string += "self";
+            string += "</span>";
+            string += "<span style='font-size:25px !important;'>";
+            string += "test";
+            string += "</span>";
+            string += "</div>";
+            string += "<p style='margin-top:15px;'>";
+            string += "<span style='font-size:21px !important; font-weight:bold;'>";
+            string += "&nbsp;스트레스 증상 자가 점검표";
+            
+            string += "<table class='innertable'>";
+            
+            string += "<tr>";
+            string += "<td class='td-result'>";
+            string += "총점";
+            string += "</td>";
+            string += "<td>";
+            string += "<span style='color:red;'>";
+            string += cnt;
+            string += "점";
+            string += "</span>";
+            string += "</td>";
+            string += "</tr>";
+            
+            string += "<tr>";
+            string += "<td class='td-result'>";
+            string += "결과";
+            string += "</td>";
+            string += "<td>";
+            string += result;
+            string += "</td>";
+            string += "</tr>";
+            
+            string += "</table>";
+            
+            string += "<div class='innerline'>";
+            string +="&nbsp;"
+            string += "</div>";
+            
+            string += "<div class='innerResult'>";
+            string += "<span style='font-weight:bold;'>";
+            string += "5개 이하";
+            string += "</span>";
+            string += "&nbsp;&nbsp; 정상";
+            string += "<br>"
+            
+            string += "<span style='font-weight:bold;'>";
+            string += "6~10개";
+            string += "</span>";
+            string += "&nbsp;&nbsp;가벼운 스트레스 상태";
+            string += "<br>"
+            string += "<span style='font-weight:bold;'>";
+            string += "11이상";
+            string += "</span>";
+            string += "&nbsp;&nbsp;중증 스트레스 상태로 몸과마음에 대한 종합검진을 받을 필요가 있다.";
+            string += "<br>"
+            
+            string += "</div>";
+            
+            
+            string += "<button class='buttonReload' onclick='history.go(0)'>";
+            string += "다시 검사";
+            string += "</button>";
+           
+            
+            input[0].innerHTML = string;
+
         }
     </script>
 </body>

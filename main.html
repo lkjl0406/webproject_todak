@@ -8,7 +8,7 @@
 <body>
   <header>
     <div class="headerBox">
-      <img src="img/logo.png" alt="logo" class="logo">
+      <a href="main.html"><img src="img/logo.png" alt="logo" class="logo"></a>
       <div class="authBox">
         <a href="login.html" class="login" style="border-color: #d6f0cc">로그인</a>
         <a href="#" class="register" style="border-color: #fce69f">회원가입</a>
@@ -16,24 +16,46 @@
     </div>
   </header>
   <nav class="navMenuBox">
-    <a href="#"class="navMenu1" style="border-color: #d6f0cc">토닥토닥?</a>
-    <a href="#"class="navMenu2" style="border-color: #fce69f">자신의 스트레스는 몇 점?</a>
-    <a href="#"class="navMenu3" style="border-color: #d6f0cc">self 토닥토닥</a>
+    <a href="what_is_todak.html"class="navMenu1" style="border-color: #d6f0cc">토닥토닥?</a>
+    <a href="self_stress_check.html"class="navMenu2" style="border-color: #fce69f">자신의 스트레스는 몇 점?</a>
+    <a href="self_todak.html"class="navMenu3" style="border-color: #d6f0cc">self 토닥토닥</a>
     <a href="#"class="navMenu4" style="border-color: #fce69f">오늘, 자신의 행복지수는?</a>
     <a href="comfort_each_other.html"class="navMenu5" style="border-color: #d6f0cc">서로 위로해요</a>
   </nav>
   <section class="mainSection">
     <div class="banner">
-      <img src="img/banner.png" alt="banner">
+      <img class="mySlides" src="img/banner.png" alt="banner" width="100%;">
+      <img class="mySlides" src="###" alt="banner" width="100%;">
+      <img class="mySlides" src="###" alt="banner" width="100%;">
+      <img class="mySlides" src="###" alt="banner" width="100%;">
       <div class="bannerRightBox">
         <div class="bannerIndicatorBox">
-          <div class="bannerIndicator">원</div>
-          <div class="bannerIndicator">원</div>
-          <div class="bannerIndicator">원</div>
-          <div class="bannerIndicator">원</div>
+          <button class="slideButton" id="buttonLeft" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="slideButton" id="buttonRight" onclick="plusDivs(1)">&#10095;</button>
         </div>
       </div>
     </div>
+      
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+</script>
+      
     <article>
       <div  class="articleMenuBox">
         <div class="articleMenu1" style="border-color: #d6f0cc">

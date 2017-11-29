@@ -71,7 +71,6 @@ a{
 }
 .bannerRightBox{
   position: absolute;
-  float: left;
   right: 0;
   bottom: 3%;
   width: 16%;
@@ -114,4 +113,27 @@ a{
 
 .clear{
   clear: both;
+}
+
+.slideButton{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    margin-bottom: 10px;
+}
+.slideButton:hover {
+    background-color: #D8D8D8!important;
+}
+#buttonLeft {
+    float: left;
+    margin-left: 60px;
+    width: 30px;
+    height: 30px;
+}
+
+#buttonRight {
+    float: right;
+    margin-right: 60px;
+    width: 30px;
+    height: 30px;
 }
