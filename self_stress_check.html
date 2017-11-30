@@ -384,14 +384,14 @@
               if(radios[i].checked)
                 cnt++;
             }
-        }
+            if(cnt<=5)
+                result = "정상";
+            else if((cnt>5)&&(cnt<=10))
+                result = "가벼운 스트레스 상태";
+            else
+                result = "중증 스트레스 상태로 몸과 마음에 대한 종합검진을 받을 필요가 있다.";
+        } 
         
-        if(cnt<=5)
-            result = "정상";
-        else if((cnt>5)&&(cnt<=10))
-            result = "가벼운 스트레스 상태";
-        else
-            result = "중증 스트레스 상태로 몸과 마음에 대한 종합검진을 받을 필요가 있다.";
         
         function scoreprint(){
             var input = document.getElementsByClassName("mainArticle");
@@ -463,7 +463,7 @@
            
             
             input[0].innerHTML = string;
-
+            console.log(result);
         }
     </script>
 </body>
