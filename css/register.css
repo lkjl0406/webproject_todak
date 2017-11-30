@@ -32,19 +32,21 @@ a{
   border-bottom: solid;
   border-width: 2px;
 }
-
 .navMenuBox{
+  margin-left: 5%;
   margin-top: 13px;
   margin-bottom: 13px;
   text-align: center;
 }
 .navMenuBox a{
+  font-size: 1.2em;
   padding-bottom: 1px;
   display: inline-block;
   border-bottom: solid;
   border-width: 1px;
   margin-left: 2%;
 }
+
 .sideContentBox{
   position: relative;
   padding: 5px;
@@ -55,20 +57,23 @@ a{
   border-color: #d6f0cc;
   border-width: 2px;
   height: auto;
-  min-height: 450px;
+  min-height: 370px;
+  align-items: center;
   background-image: url('../img/logo.png');
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: right bottom;
 }
 
-.sideTitle{
-  margin-top: 30px;
-  text-align: center;
-  border-bottom: solid;
-  border-width: 2px;
+.sideNav{
+  margin-top: 20px;
+  border-bottom: 2px solid;
   border-color: #fce69f;
-  
+  display: inline-block;
+  width: 96%;
+  padding-bottom: 3px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .mainSection{
@@ -80,36 +85,60 @@ a{
 }
 
 .mainSectionTitle{
-  border-top: solid;
-  border-bottom: solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
   border-color: #d6f0cc;
-  border-width: 2px;
   padding: 5px;
   font-size: 2em;
 }
 
 .mainArticle{
-  min-height: 80%;
+  position: relative;
+  min-height: 300px;
+  height: 80%;
   margin-top: 12px;
-  border: solid;
-  border-width: 2px;
+  border: 2px solid;
   border-color: #d6f0cc;
   padding: 15px;
-  background-position: 650px 240px;
-  background-image: url(../img/what_is_todak_mainArticle.png);
-  background-clip: 50px;
-  background-size: 200px 100px;
+  background-position: right bottom;
+  background-image: url();
+  background-clip: 100px;
   background-repeat: no-repeat;
 }
-.mainArticle p{
-  margin-left: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
+
+.registerBox{
+  overflow: auto;
+  position: absolute;
+  width: 45%;
+  height: 30%;
+  margin: auto;
+  left: 25%;
+  right: 25%;
+  top: 30%;
+  bottom: 30%;
 }
-.DetailSideContent {
-    font-size: 12px;
-    padding-top: 15px;
-    text-align: center;
+
+.registerInputBox{
+  position: relative;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+
+.registerInputBox input{
+  position: absolute;
+  margin: 0;
+  padding: 1%;
+  border: 1px solid;
+  width: 100%;
+  height: 20%;
+}
+
+.registerConfirm{
+  position: absolute;
+  border: 1px solid;
+  border-radius: 0;
+  right: 0;
+  height: 100%;
+  width: 25%;
 }

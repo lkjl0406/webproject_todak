@@ -50,25 +50,25 @@ a{
   padding: 5px;
   margin-left: 7%;
   float: left;
-  width: 12%;
+  width: 14%;
   border: solid;
   border-color: #d6f0cc;
   border-width: 2px;
-  height: auto;
-  min-height: 450px;
+  height: 500px;
+  min-height: 370px;
   background-image: url('../img/logo.png');
   background-size: 100px;
   background-repeat: no-repeat;
   background-position: right bottom;
+  text-align: center;
 }
 
 .sideTitle{
   margin-top: 30px;
-  text-align: center;
+  padding-left: 4px;
   border-bottom: solid;
   border-width: 2px;
   border-color: #fce69f;
-  
 }
 
 .mainSection{
@@ -89,17 +89,33 @@ a{
 }
 
 .mainArticle{
+  width: 100%;  
   min-height: 80%;
   margin-top: 12px;
   border: solid;
   border-width: 2px;
   border-color: #d6f0cc;
   padding: 15px;
-  background-position: 650px 240px;
-  background-image: url(../img/what_is_todak_mainArticle.png);
+  position: relative;
+  
+}
+.mainArticleImg {
+  width: 870px;
+  height: 300px;
+  margin-top: 40px;
+  background-position : center;
+  background-image: url(../img/today_my_happy_score_mainArticle.png.jpg);
   background-clip: 50px;
-  background-size: 200px 100px;
   background-repeat: no-repeat;
+  opacity:0.3;
+}
+.mainArticleText {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin 20px 60px 0px 60px;
+    font-weight: bold;
+    position: absolute;
 }
 .mainArticle p{
   margin-left: 0;
@@ -108,8 +124,72 @@ a{
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
 }
+.mainArticleTopRightText{
+    width: 100%;
+    height: 15px;
+    left: 80%;
+    font-size: 15px;
+    font-weight: 900;
+    position: absolute;
+}
+.mainArticleTopleftText {
+    width: 100%;
+    height: 15px;
+    top: 20%;
+    left: 12%;
+    font-size: 18px;
+    font-weight: 900;
+    position: absolute;
+}
+.mainArticleTextTitle {
+    font-size: 30px;
+    margin-top: 20px;
+}
+.DetailSideTitle {
+    font-size: 14px;
+    padding: 15px 6px 0 6px;
+}
 .DetailSideContent {
     font-size: 12px;
     padding-top: 15px;
+}
+.mainArticleText-1{ 
+    margin-top: 40px;
+    font-size: 20px;
+}
+.mainArticleText-2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.mainArticleText-3  {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.mainArticleText-4{
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 14px;
+}
+.button {
+    border: none;
+    padding: 15px 25px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 3px solid #fce69f;
+}
+.button:hover {
+    background-color: #fce69f;
+    color: white;   
+}
+.mainArticleButton {
+    position: relative;
+    left: 75%;
+    top: -10px;
 }
